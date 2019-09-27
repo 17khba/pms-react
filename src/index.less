@@ -1,0 +1,82 @@
+@import './common/css/mixin/clearfix';
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+
+  table {
+    table-layout: fixed;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+section {
+
+  /* Pagination分页
+  -------------------------- */
+  .ant-pagination {
+    margin: 20px !important;
+  }
+}
+
+/* modal 模态框样式 */
+.spin-wrap {
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  background-color: #fff;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 400px;
+    vertical-align: middle;
+  }
+}
+
+
+.modal-wrap {
+  max-height: 400px;
+
+  .modal-left,
+  .modal-right {
+    width: 400px;
+  }
+
+  .modal-left {
+    .ant-form-extra {
+      color: #f56c6c;
+    }
+
+    .form-item-datepicker {
+      margin-bottom: 0;
+    }
+  }
+
+  .modal-right {
+    height: 400px;
+    padding: 0 20px;
+    border-left: 1px solid #dbdbdb;
+
+    .ant-tree {
+      height: calc(100% - 28px);
+      overflow: hidden;
+      overflow-y: auto;
+    }
+  }
+}
