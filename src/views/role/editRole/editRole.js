@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 import { Spin, Modal, Form, Tree, Input, notification, DatePicker, Switch } from 'antd';
 import { reqHandle, errHandle } from '@/common/js/mixin';
@@ -354,6 +355,13 @@ class EditRoleComponent extends Component {
     );
   }
 }
+
+EditRoleComponent.propTypes = {
+  visible: PropTypes.bool.isRequired,
+  formData: PropTypes.object.isRequired,
+  hideEditModal: PropTypes.func.isRequired,
+  init: PropTypes.func.isRequired,
+};
 
 const EditRoleModal = Form.create({
   name: 'EditRoleModal',

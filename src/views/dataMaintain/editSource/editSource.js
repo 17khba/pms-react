@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Spin, Modal, Form, Tree, Input, notification, Switch } from 'antd';
 import { reqHandle, errHandle } from '@/common/js/mixin';
 import { GetTreelistNoSource } from '@/api';
@@ -334,6 +335,13 @@ class EditSourceComponent extends Component {
     );
   }
 }
+
+EditSourceComponent.propTypes = {
+  visible: PropTypes.bool.isRequired,
+  data: PropTypes.object.isRequired,
+  hideModal: PropTypes.func.isRequired,
+  init: PropTypes.func.isRequired,
+};
 
 const EditSourceModal = Form.create({
   name: 'EditSourceModal',

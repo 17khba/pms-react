@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Modal, Form, Input, notification } from 'antd';
 import { reqHandle, errHandle } from '@/common/js/mixin';
 import { AddUser } from '@/api/user';
@@ -122,6 +123,12 @@ class AddUserComponent extends Component {
     );
   }
 }
+
+AddUserComponent.propsType = {
+  visible: PropTypes.object.isRequired,
+  hideAddModal: PropTypes.func.isRequired,
+  init: PropTypes.func.isRequired,
+};
 
 const AddUserModal = Form.create({
   name: 'AddUserModal',

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Spin, Modal, Form, Tree, Input, notification, DatePicker, Switch } from 'antd';
 import { reqHandle, errHandle } from '@/common/js/mixin';
 import { GetTreelist } from '@/api';
@@ -294,6 +295,12 @@ class AddRoleComponent extends Component {
     );
   }
 }
+
+AddRoleComponent.propTypes = {
+  visible: PropTypes.bool.isRequired,
+  hideAddModal: PropTypes.func.isRequired,
+  init: PropTypes.func.isRequired,
+};
 
 const AddRoleModal = Form.create({
   name: 'AddRoleModal',

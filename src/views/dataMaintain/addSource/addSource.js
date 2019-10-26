@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Spin, Modal, Form, Tree, Input, notification, Switch } from 'antd';
 import { reqHandle, errHandle } from '@/common/js/mixin';
 import { GetTreelistNoSource } from '@/api';
@@ -300,6 +301,12 @@ class AddSourceComponent extends Component {
     );
   }
 }
+
+AddSourceComponent.propTypes = {
+  visible: PropTypes.bool.isRequired,
+  hideModal: PropTypes.func.isRequired,
+  init: PropTypes.func.isRequired,
+};
 
 const AddSourceModal = Form.create({
   name: 'AddSourceModal',
