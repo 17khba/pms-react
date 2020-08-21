@@ -28,7 +28,7 @@ module.exports = {
     },
     {
       value: 'chore',
-      name : '🗯  chore:    Changes that don\'t modify src or test files. Such as updating build tasks, package manager'
+      name : '🔨  chore:    Changes that don\'t modify src or test files. Such as updating build tasks, package manager'
     },
     {
       value: 'style',
